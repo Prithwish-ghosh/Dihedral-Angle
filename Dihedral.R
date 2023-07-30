@@ -11,8 +11,6 @@ data = data.frame("Planes(1 degree)" = c(111,200,220,311,222,400,331,420,422,333
                                                                 162.44679 , 162.44679) 
           )
 head(data)
-data$cosphi = cos(data$Angle)
-head(data)
 library(circular)
 watson.test(data$Angular.Difference , alpha = 0.05 , dist = "vonmises")
 watson.test(data$Angle , alpha = 0.05 , dist = "vonmises")
